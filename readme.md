@@ -1,4 +1,4 @@
-# Moti
+# MADG
 This repository contains the source code of the TIFS paper "Motif-Level Anomaly Detection in Dynamic Graphs"
 
 ```python
