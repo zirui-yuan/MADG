@@ -136,7 +136,7 @@ class AnomalyCircleSnapShot(CircleMotifSnapShot):
         self.motif_id_list = self.augmented_nodes_list[self.motif_start_id:]
 
         self.motif_labels = np.array([0]*self.motif_num +[1]*self.anomaly_motifs_num)
-        self.nodes_labels = np.zeros(self.nodes_num, dtype=np.int)
+        self.nodes_labels = np.zeros(self.nodes_num, dtype=np.int64)
         self.nodes_labels[self.anomaly_nodes] = 1
         self.motif_adj, self.motif_norm_adj = self.build_motif_adj()
 
@@ -224,7 +224,7 @@ class AnomalyMotifSnapShot(MotifSnapShot):
         self.motif_id_list = self.augmented_nodes_list[self.motif_start_id:]
 
         self.motif_labels = np.array([0]*self.motif_num +[1]*self.anomaly_motifs_num)
-        self.nodes_labels = np.zeros(self.nodes_num, dtype=np.int)
+        self.nodes_labels = np.zeros(self.nodes_num, dtype=np.int64)
         self.nodes_labels[self.anomaly_nodes] = 1
         self.motif_adj, self.motif_norm_adj = self.build_motif_adj()
 
@@ -330,7 +330,7 @@ class AnomalyEdgeSnapShot(SnapShot):
         self.motif_id_list = self.augmented_nodes_list[self.motif_start_id:]
 
         self.motif_labels = np.array([0]*self.edges_num +[1]*self.anomaly_motifs_num)
-        self.nodes_labels = np.zeros(self.nodes_num, dtype=np.int)
+        self.nodes_labels = np.zeros(self.nodes_num, dtype=np.int64)
         self.nodes_labels[self.anomaly_nodes] = 1
         self.motif_adj, self.motif_norm_adj = self.build_motif_adj()
 

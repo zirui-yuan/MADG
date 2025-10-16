@@ -1,0 +1,19 @@
+# MADG (Motif-level Anomaly Detection in Dynamic Graphs) Requirements
+# Core dependencies with fixed versions for reproducibility
+
+# Deep Learning Framework
+torch==2.6.0
+torch_geometric==2.7.0
+
+# Scientific Computing
+numpy==2.3.4
+scipy==1.16.2
+
+# Data Processing
+pandas==2.3.3
+
+# Machine Learning
+scikit_learn==1.7.2
+
+# Progress Bar
+tqdm==4.65.0

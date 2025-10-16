@@ -1,7 +1,7 @@
 import numpy as np
 import torch
 import torch.nn as nn
-from Graph import AnomalyMotifySnapShot
+from Graph import AnomalyMotifSnapShot
 import pickle
 import os
 from utils import load_data, generate_snapshots
@@ -18,7 +18,7 @@ for data in data_list:
     print("generate {} data....".format(data))
     edges,times,n = load_data(data)
     snaps = generate_snapshots(edges, 10)
-    SnapShots = [AnomalyMotifySnapShot(snaps[i],p=p) for i in range(len(snaps))]
+    SnapShots = [AnomalyMotifSnapShot(snaps[i],p=p) for i in range(len(snaps))]
     if data == 'digg':
         digg_path = os.path.join(root_path, data)
         ensure_dir_exit(digg_path)

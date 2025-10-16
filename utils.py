@@ -140,7 +140,7 @@ def sparse_mx_to_torch_sparse_tensor(sparse_mx):
         np.vstack((sparse_mx.row, sparse_mx.col)).astype(np.int64))
     values = torch.from_numpy(sparse_mx.data)
     shape = torch.Size(sparse_mx.shape)
-    return torch.sparse.FloatTensor(indices, values, shape)
+    return torch.sparse_coo_tensor(indices, values, shape, dtype=torch.float32)
 
 def preprocess_adj(adj, is_sparse=False):
     """Preprocessing of adjacency matrix for simple pygGCN model and conversion to

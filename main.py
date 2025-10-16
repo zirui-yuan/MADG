@@ -120,7 +120,7 @@ def train(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--dataset', default='uci', help='dataset name: uci/dnc/alpha/otc')
+    parser.add_argument('--dataset', default='dnc', help='dataset name: uci/dnc/alpha/otc')
     parser.add_argument('--hidden_dim', type=int, default=64, help='dimension of hidden embedding (default: 64)')
     parser.add_argument('--epoch', type=int, default=10, help='Training epoch')
     parser.add_argument('--num_heads', type=int, default=2, help='Number of the heads of attention module')
